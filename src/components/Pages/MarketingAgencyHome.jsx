@@ -16,7 +16,7 @@ import PortfolioSlider2 from '../Slider/PortfolioSlider2';
 import ServiceList from '../ServiceList';
 
 export default function MarketingAgencyHome() {
-  pageTitle('Marketing Agency');
+  pageTitle('La Flamme Limouxine');
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
