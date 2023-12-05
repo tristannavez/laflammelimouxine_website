@@ -43,12 +43,12 @@ export default function Footer({copyrightText, logoSrc, logoAlt, text}) {
       <Div className="cs-fooer_main">
         <Div className="container">
           <Div className="row">
-            <Div className="col-lg-3 col-sm-6">
+            <Div className="col-lg-6 col-sm-6">
               <Div className="cs-footer_item">
                 <TextWidget 
-                  logoSrc='/images/footer_logo.svg' 
+                  logoSrc='/images/logo.png'
                   logoAlt='Logo'
-                  text ='Welcome to arino sed ut perspiciae omunde omnis iste natus error sitort voluptatem accusantium.'
+                  text ='Vente, installation, entretien et dépannage de chauffage bois et granulé à Limoux'
                 />
                 <SocialWidget/>
               </Div>
@@ -60,16 +60,7 @@ export default function Footer({copyrightText, logoSrc, logoAlt, text}) {
             </Div>
             <Div className="col-lg-3 col-sm-6">
               <Div className="cs-footer_item">
-                <ContactInfoWidget title='Contact Us'/>
-              </Div>
-            </Div>
-            <Div className="col-lg-3 col-sm-6">
-              <Div className="cs-footer_item">
-                <Newsletter 
-                  title='Subscribe' 
-                  subtitle='At vero eos et accusamus et iusto odio as part dignissimos ducimus qui blandit.' 
-                  placeholder='example@gmail.com'
-                />
+                <ContactInfoWidget title='Nous contacter'/>
               </Div>
             </Div>
           </Div>
@@ -78,7 +69,7 @@ export default function Footer({copyrightText, logoSrc, logoAlt, text}) {
       <Div className="container">
         <Div className="cs-bottom_footer">
           <Div className="cs-bottom_footer_left">
-            <Div className="cs-copyright">Copyright © 2022 Laralink.</Div>
+            <Div className="cs-copyright">Copyright © La Flamme Limouxine.</Div>
           </Div>
           <Div className="cs-bottom_footer_right">
             <MenuWidget menuItems={copyrightLinks} variant=' cs-style2'/>
