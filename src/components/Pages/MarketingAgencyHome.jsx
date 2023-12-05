@@ -22,7 +22,7 @@ export default function MarketingAgencyHome() {
   }, []);
   const heroSocialLinks = [
     {
-      name: 'Behance',
+      name: 'Linkedin',
       links: '/',
     },
     {
@@ -52,11 +52,11 @@ export default function MarketingAgencyHome() {
     <>
       {/* Start Hero Section */}
       <Hero5
-        title="Grow Your Business<br /> With Digital Strategy"
-        subtitle="We deliver best problem solving solution for our client and provide finest finishing product in present and upcoming future."
+        title="La Flamme Limouxine"
+        subtitle="Vente, installation, entretien et dépannage de solutions énergétiques dans le secteur de Limoux."
         btnLink="contact"
-        btnText="Let’s talk"
-        socialLinksHeading="Follow Us"
+        btnText="Nous contacter"
+        socialLinksHeading="Suis nous"
         heroSocialLinks={heroSocialLinks}
       />
       {/* End Hero Section */}
@@ -76,7 +76,7 @@ export default function MarketingAgencyHome() {
       <Spacing lg="145" md="80" />
       <Div className="container">
         <SectionHeading
-          title="Our core services"
+          title="Nos services"
           subtitle="Services"
           variant="cs-style1 text-center"
         />
@@ -88,38 +88,14 @@ export default function MarketingAgencyHome() {
       {/* Start PortfolioSlider Section */}
       <Spacing lg="120" md="50" />
       <Div className="container">
-        <h2 className="cs-font_50 cs-m0 cs-line_height_4">
-          Our agile process is ability to adapt and respond to change. Agile
-          organizations view change as an opportunity, not a threat.
-        </h2>
+        <h1 className="cs-font_20 cs-m0 cs-line_height_4">
+            La flamme Limouxine, entreprise de vente d’appareil de chauffage à bois et à granulé à Limoux, possède la qualification RGE Qualibois.
+            Notre entreprise opère dans la vente et l’installation d’appareils de chauffage à bois et à granulés, mais nous offrons également des services d’entretien et de dépannage de chauffage bois et granulés à Limoux.
+        </h1>
       </Div>
       <Spacing lg="90" md="70" />
       <PortfolioSlider2 />
       {/* End PortfolioSlider Section */}
-
-      {/* Start FunFact Section */}
-      <Spacing lg="150" md="80" />
-      <Div className="container">
-        <FunFact2
-          data={funfaceData}
-          variant="cs-no_shadow"
-          bgUrl="/images/funfact_shape_bg.svg"
-        />
-      </Div>
-      {/* End FunFact Section */}
-
-      {/* Start Pricing Section */}
-      <Spacing lg="145" md="80" />
-      <Div className="container">
-        <SectionHeading
-          title="Providing best <br/>pricing for client"
-          subtitle="Pricing & Packaging"
-        />
-        <Spacing lg="85" md="40" />
-        <PricingTableList />
-      </Div>
-      <Spacing lg="125" md="55" />
-      {/* End Pricing Section */}
 
       {/* Start Testimonial Section */}
       <TestimonialSlider />
@@ -134,9 +110,9 @@ export default function MarketingAgencyHome() {
           <Div className="row">
             <Div className="col-xl-4">
               <SectionHeading
-                title="Explore recent publication"
-                subtitle="Our Blog"
-                btnText="View More Blog"
+                title="Nos publications récentes"
+                subtitle="Nos actualités"
+                btnText="Voir plus"
                 btnLink="/blog"
               />
               <Spacing lg="90" md="45" />
@@ -153,7 +129,7 @@ export default function MarketingAgencyHome() {
 
       {/* Start MovingText Section */}
       <Spacing lg="125" md="70" />
-      <MovingText text="Our reputed world wide partners" />
+      <MovingText text="Nos partenaires réputés mondialement" />
       <Spacing lg="100" md="70" />
       {/* End MovingText Section */}
 
@@ -167,8 +143,8 @@ export default function MarketingAgencyHome() {
       {/* Start CTA Section */}
       <Div className="container">
         <Cta
-          title="Let’s disscuse make <br />something <i>cool</i> together"
-          btnText="Apply For Meeting"
+          title="Contacez-nous"
+          btnText="Contact"
           btnLink="/contact"
           bgSrc="/images/cta_bg_3.jpeg"
         />
