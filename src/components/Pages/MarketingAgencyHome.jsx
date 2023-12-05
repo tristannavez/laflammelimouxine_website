@@ -85,7 +85,6 @@ export default function MarketingAgencyHome() {
       </Div>
       {/* End Services Section */}
 
-      {/* Start PortfolioSlider Section */}
       <Spacing lg="120" md="50" />
       <Div className="container">
         <h1 className="cs-font_20 cs-m0 cs-line_height_4">
@@ -93,9 +92,6 @@ export default function MarketingAgencyHome() {
             Notre entreprise opère dans la vente et l’installation d’appareils de chauffage à bois et à granulés, mais nous offrons également des services d’entretien et de dépannage de chauffage bois et granulés à Limoux.
         </h1>
       </Div>
-      <Spacing lg="90" md="70" />
-      <PortfolioSlider2 />
-      {/* End PortfolioSlider Section */}
 
       {/* Start Blog Section */}
       <Spacing lg="150" md="80" />
