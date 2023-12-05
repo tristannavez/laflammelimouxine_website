@@ -12,12 +12,6 @@ export default function SocialWidget() {
       <Link to='/' className="cs-center">
         <Icon icon="fa6-brands:twitter" />               
       </Link>
-      <Link to='/' className="cs-center">
-        <Icon icon="fa6-brands:youtube" />              
-      </Link>
-      <Link to='/' className="cs-center">
-        <Icon icon="fa6-brands:slack" />
-      </Link>
     </Div>
   )
 }

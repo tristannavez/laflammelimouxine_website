@@ -10,30 +10,26 @@ import './footer.scss'
 export default function Footer({copyrightText, logoSrc, logoAlt, text}) {
   const copyrightLinks = [
     {
-      title: 'Terms of Use',
-      href: '/'
-    },
-    {
-      title: 'Privacy Policy',
+      title: 'Mentions légales',
       href: '/'
     }
   ]
   
   const serviceMenu = [
     {
-      title: 'UI/UX design',
+      title: 'Vente',
       href: '/service/service-details'
     },
     {
-      title: 'WP development',
+      title: 'Installation',
       href: '/service/service-details'
     },
     {
-      title: 'Digital marketing',
+      title: 'Entretien',
       href: '/service/service-details'
     },
     {
-      title: 'React development',
+      title: 'Dépannage',
       href: '/service/service-details'
     },
   ]
@@ -53,12 +49,12 @@ export default function Footer({copyrightText, logoSrc, logoAlt, text}) {
                 <SocialWidget/>
               </Div>
             </Div>
-            <Div className="col-lg-3 col-sm-6">
+            <Div className="col-lg-2 col-sm-6">
               <Div className="cs-footer_item">
                 <MenuWidget menuItems={serviceMenu} menuHeading='Services'/>
               </Div>
             </Div>
-            <Div className="col-lg-3 col-sm-6">
+            <Div className="col-lg-4 col-sm-6">
               <Div className="cs-footer_item">
                 <ContactInfoWidget title='Nous contacter'/>
               </Div>
