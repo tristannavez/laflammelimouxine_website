@@ -7,45 +7,45 @@ export default function PostSlider() {
   const postData = [
     {
       url:'/blog/blog-details', 
-      src:'/images/post_1.jpeg', 
-      alt:'Post', 
-      date:'07 Mar 2022', 
-      title:'How to keep fear from ruining your art business with confident'
+      src:'/images/post_1.jpg',
+      alt:'PELLET 05 / 2023',
+      date:'2 MAI 2023',
+      title:'PELLET 05 / 2023'
     },
     {
       url:'/blog/blog-details', 
-      src:'/images/post_2.jpeg', 
+      src:'/images/post_2.jpg',
       alt:'Post', 
-      date:'10 Feb 2022',
-      title:'Artistic mind will be great for creation anything'
+      date:'8 MAR 2023',
+      title:'Insert à granulés'
     },
     {
       url:'/blog/blog-details', 
-      src:'/images/post_3.jpeg', 
+      src:'/images/post_3.jpg',
       alt:'Post', 
-      date:'05 Mar 2022',
-      title:'A.I will take over all job for human within next year'
+      date:'9 FÉV 2023',
+      title:'Poêle rustique'
     },
     {
-      url:'/blog/blog-details', 
-      src:'/images/post_1.jpeg', 
-      alt:'Post', 
-      date:'07 Mar 2022', 
-      title:'How to keep fear from ruining your art business with confident'
+      url:'/blog/blog-details',
+      src:'/images/post_1.jpg',
+      alt:'PELLET 05 / 2023',
+      date:'2 MAI 2023',
+      title:'PELLET 05 / 2023'
     },
     {
-      url:'/blog/blog-details', 
-      src:'/images/post_2.jpeg', 
-      alt:'Post', 
-      date:'10 Feb 2022',
-      title:'Artistic mind will be great for creation anything'
+      url:'/blog/blog-details',
+      src:'/images/post_2.jpg',
+      alt:'Post',
+      date:'8 MAR 2023',
+      title:'Insert à granulés'
     },
     {
-      url:'/blog/blog-details', 
-      src:'/images/post_3.jpeg', 
-      alt:'Post', 
-      date:'05 Mar 2022',
-      title:'A.I will take over all job for human within next year'
+      url:'/blog/blog-details',
+      src:'/images/post_3.jpg',
+      alt:'Post',
+      date:'9 FÉV 2023',
+      title:'Poêle rustique'
     }
   ]
   
