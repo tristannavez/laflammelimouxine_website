@@ -97,10 +97,6 @@ export default function MarketingAgencyHome() {
       <PortfolioSlider2 />
       {/* End PortfolioSlider Section */}
 
-      {/* Start Testimonial Section */}
-      <TestimonialSlider />
-      {/* End Testimonial Section */}
-
       {/* Start Blog Section */}
       <Spacing lg="150" md="80" />
       <Div className="cs-shape_wrap_4">
