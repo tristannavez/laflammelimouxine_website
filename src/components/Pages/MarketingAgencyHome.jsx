@@ -65,7 +65,7 @@ export default function MarketingAgencyHome() {
       <Div className="cs-video_block_1_wrap">
         <Div className="container">
           <VideoModal
-            videoSrc="https://www.youtube.com/watch?v=VcaAVWtP48A"
+            videoSrc="https://www.youtube.com/watch?v=e7xYgbsbImA"
             bgUrl="/images/video_bg_2.jpeg"
           />
         </Div>
