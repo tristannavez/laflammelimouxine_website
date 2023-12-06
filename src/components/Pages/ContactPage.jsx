@@ -8,7 +8,7 @@ import Spacing from '../Spacing';
 import ContactInfoWidget from '../Widget/ContactInfoWidget';
 
 export default function ContactPage() {
-  pageTitle('Contact Us');
+  pageTitle('Nous contacter');
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -24,8 +24,8 @@ export default function ContactPage() {
         <Div className="row">
           <Div className="col-lg-6">
             <SectionHeading
-              title="Do you have a project <br/>in your mind?"
-              subtitle="Getting Touch"
+              title="Avez-vous un projet <br/>en tête?"
+              subtitle="Contactez-nous"
             />
             <Spacing lg="55" md="30" />
             <ContactInfoWidget withIcon />
@@ -34,7 +34,7 @@ export default function ContactPage() {
           <Div className="col-lg-6">
             <form action="#" className="row">
               <Div className="col-sm-6">
-                <label className="cs-primary_color">Full Name*</label>
+                <label className="cs-primary_color">Prénom et Nom*</label>
                 <input type="text" className="cs-form_field" />
                 <Spacing lg="20" md="20" />
               </Div>
@@ -44,7 +44,7 @@ export default function ContactPage() {
                 <Spacing lg="20" md="20" />
               </Div>
               <Div className="col-sm-6">
-                <label className="cs-primary_color">Project Type*</label>
+                <label className="cs-primary_color">Type de projet*</label>
                 <input type="text" className="cs-form_field" />
                 <Spacing lg="20" md="20" />
               </Div>
@@ -54,7 +54,7 @@ export default function ContactPage() {
                 <Spacing lg="20" md="20" />
               </Div>
               <Div className="col-sm-12">
-                <label className="cs-primary_color">Mobile*</label>
+                <label className="cs-primary_color">Message*</label>
                 <textarea
                   cols="30"
                   rows="7"
