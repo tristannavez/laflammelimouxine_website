@@ -5,14 +5,9 @@ import Hero5 from '../Hero/Hero5';
 import LogoList from '../LogoList';
 import MovingText from '../MovingText';
 import Spacing from '../Spacing';
-import VideoModal from '../VideoModal';
 import { pageTitle } from '../../helper';
 import PostSlider from '../Slider/PostSlider';
 import SectionHeading from '../SectionHeading';
-import TestimonialSlider from '../Slider/TestimonialSlider';
-import PricingTableList from '../PricingTable/PricingTableList';
-import FunFact2 from '../FunFact/FunFact2';
-import PortfolioSlider2 from '../Slider/PortfolioSlider2';
 import ServiceList from '../ServiceList';
 
 export default function MarketingAgencyHome() {
@@ -30,24 +25,7 @@ export default function MarketingAgencyHome() {
       links: '/',
     },
   ];
-  const funfaceData = [
-    {
-      title: 'Digital products',
-      factNumber: '550',
-    },
-    {
-      title: 'Global happy clients',
-      factNumber: '40K',
-    },
-    {
-      title: 'Project completed',
-      factNumber: '50k',
-    },
-    {
-      title: 'Team members',
-      factNumber: '250',
-    },
-  ];
+
   return (
     <>
       {/* Start Hero Section */}
