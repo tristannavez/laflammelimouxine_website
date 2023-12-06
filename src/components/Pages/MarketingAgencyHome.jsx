@@ -61,16 +61,6 @@ export default function MarketingAgencyHome() {
       />
       {/* End Hero Section */}
 
-      {/* Start Video Block Section */}
-      <Div className="cs-video_block_1_wrap">
-        <Div className="container">
-          <VideoModal
-            videoSrc="https://www.youtube.com/watch?v=e7xYgbsbImA"
-            bgUrl="/images/video_bg_2.jpeg"
-          />
-        </Div>
-      </Div>
-      {/* End Video Block Section */}
 
       {/* Start Services Section */}
       <Spacing lg="145" md="80" />
