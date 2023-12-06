@@ -5,7 +5,6 @@ import Newsletter from '../Widget/Newsletter';
 import './header.scss';
 import ContactInfoWidget from '../Widget/ContactInfoWidget';
 import Div from '../Div';
-import DropDown from './DropDown';
 
 export default function Header({ variant }) {
   const [isSticky, setIsSticky] = useState(false);
@@ -127,22 +126,15 @@ export default function Header({ variant }) {
         <Div className="cs-side_header_in">
           <Div className="cs-side_header_shape" />
           <Link className="cs-site_branding" to="/">
-            <img src="/images/footer_logo.svg" alt="Logo" />
+            <img src="/images/logo.png" alt="Logo" />
           </Link>
           <Div className="cs-side_header_box">
             <h2 className="cs-side_header_heading">
-              Do you have a project in your <br /> mind? Keep connect us.
+              Avez vous un projet en <br /> tête? Contactez-nous.
             </h2>
           </Div>
           <Div className="cs-side_header_box">
-            <ContactInfoWidget title="Contact Us" withIcon />
-          </Div>
-          <Div className="cs-side_header_box">
-            <Newsletter
-              title="Subscribe"
-              subtitle="At vero eos et accusamus et iusto odio as part dignissimos ducimus qui blandit."
-              placeholder="example@gmail.com"
-            />
+            <ContactInfoWidget title="Nous contacter" withIcon />
           </Div>
           <Div className="cs-side_header_box">
             <SocialWidget />
