@@ -18,7 +18,7 @@ export default function ServicesPage() {
     <>
       <PageHeading 
         title='Services'
-        bgSrc='images/service_hero_bg.jpeg'
+        bgSrc='images/service_hero_bg.jpg'
         pageLinkText='Services'
       />
       <Spacing lg='150' md='80'/>
@@ -29,8 +29,8 @@ export default function ServicesPage() {
           <Div className="row">
             <Div className="col-xl-4">
               <SectionHeading
-                title='Services we can help you with' 
-                subtitle='What Can We Do'
+                title='Les services que nous proposons'
+                subtitle='Nos services'
               />
               <Spacing lg='90' md='45'/>
             </Div>
@@ -39,9 +39,9 @@ export default function ServicesPage() {
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title='UI/UX design'
+                    title='Vente'
                     link='/service/ui-ux-design'
-                    src='/images/service_1.jpeg'
+                    src='https://img-ccmbg-1.lefigaro.fr/3ZrZL94XUg-8cZkPsPMQMDH2iPk=/1500x/smart/5e59febf493744ec91c589ae7a63848c/ccmcms-figaroimmobilier/29532249.jpg'
                     alt='Service'
                   />
                   <Spacing lg='0' md='30'/>
@@ -49,18 +49,18 @@ export default function ServicesPage() {
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title='React.js Development'
+                    title='Installation'
                     link='/service/reactjs-development'
-                    src='/images/service_2.jpeg'
+                    src='https://media.istockphoto.com/id/1427260980/fr/photo/un-po%C3%AAle-%C3%A0-bois-avec-du-bois-et-des-granul%C3%A9s.jpg?s=612x612&w=0&k=20&c=rVaag8SpdLlKHdfhelTbdVfFTvEwsYPuHJm5XpoDFjw='
                     alt='Service'
                   />
                   <Spacing lg='0' md='30'/>
                 </Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title='Digital Marketing'
+                    title='Entretien'
                     link='/service/digital-marketing'
-                    src='/images/service_3.jpeg'
+                    src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfOPwnsfrleiEdGCqDjR8uKYT5Jsa6jYWdNg&usqp=CAU'
                     alt='Service'
                   />
                   <Spacing lg='0' md='30'/>
@@ -68,30 +68,9 @@ export default function ServicesPage() {
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title='Technology'
+                    title='Dépannage'
                     link='/service/technology'
-                    src='/images/service_4.jpeg'
-                    alt='Service'
-                  />
-                  <Spacing lg='0' md='30'/>
-                </Div>
-                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6'>
-                  <Card
-                    title='Consultancy'
-                    link='/service/consultancy'
-                    src='/images/service_5.jpeg'
-                    alt='Service'
-                  />
-                  <Spacing lg='0' md='30'/>
-                </Div>
-                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6'>
-                  <Card
-                    title='Creative Design'
-                    link='/service/creative-design'
-                    src='/images/service_6.jpeg'
+                    src='https://www.agecic.fr/91-medium_default/realiser-le-depannage-des-poeles-a-granules-de-bois-pellets.jpg'
                     alt='Service'
                   />
                   <Spacing lg='0' md='30'/>
@@ -101,26 +80,17 @@ export default function ServicesPage() {
           </Div>
         </Div>
       </Div>
-      <Spacing lg='150' md='80'/>
-      <Div className="container">
-        <SectionHeading
-          title='Providing best <br/>pricing for client' 
-          subtitle='Pricing & Packaging'
-        />
-        <Spacing lg='85' md='40'/>
-        <PricingTableList/>
-      </Div>
-      <Spacing lg='125' md='55'/>
-      <TestimonialSlider/>
-      <Spacing lg='30' md='80'/>
+      <Spacing lg='190' md='80'/>
       <Div className="container">
         <Cta 
-          title='Let’s disscuse make <br />something <i>cool</i> together' 
-          btnText='Apply For Meeting' 
+          title='Discutons de votre<br /> <i>projet</i> ensemble'
+          btnText='Nous contacter'
           btnLink='/contact' 
           bgSrc='/images/cta_bg.jpeg'
         />
       </Div>
+        <Spacing lg='30' md='80'/>
+        <TestimonialSlider/>
       <Spacing lg='30' md='80'/>
     </>
   )
