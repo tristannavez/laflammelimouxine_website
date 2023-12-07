@@ -1,3 +1,5 @@
+@import '../../scss/default/color_variable';
+
 .cs-card.cs-style1 {
   position: relative;
   border-radius: 15px;
@@ -34,6 +36,7 @@
     }
   }
   .cs-card_title {
+    color: $white;
     font-size: 22px;
     margin: 0;
     line-height: 1.5em;
