@@ -112,7 +112,7 @@ export default function ServicesPage() {
       </Div>
       <Spacing lg='125' md='55'/>
       <TestimonialSlider/>
-      <Spacing lg='150' md='80'/>
+      <Spacing lg='30' md='80'/>
       <Div className="container">
         <Cta 
           title='Let’s disscuse make <br />something <i>cool</i> together' 
@@ -121,6 +121,7 @@ export default function ServicesPage() {
           bgSrc='/images/cta_bg.jpeg'
         />
       </Div>
+      <Spacing lg='30' md='80'/>
     </>
   )
 }
