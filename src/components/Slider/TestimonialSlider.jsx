@@ -48,9 +48,9 @@ export default function TestimonialSlider() {
         'slick-prev slick-arrow' + (currentSlide === 0 ? ' slick-disabled' : '')
       }
       aria-hidden="true"
-      aria-disabled={currentSlide === 0 ? true : false}
+      aria-disabled={currentSlide === 0}
     >
-      <Icon icon="bi:arrow-left" />
+      <Icon className="arrow" icon="bi:arrow-left" />
     </div>
   );
   const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
@@ -61,9 +61,9 @@ export default function TestimonialSlider() {
         (currentSlide === slideCount - 1 ? ' slick-disabled' : '')
       }
       aria-hidden="true"
-      aria-disabled={currentSlide === slideCount - 1 ? true : false}
+      aria-disabled={currentSlide === slideCount - 1}
     >
-      <Icon icon="bi:arrow-right" />
+      <Icon className="arrow" icon="bi:arrow-right" />
     </div>
   );
   return (
