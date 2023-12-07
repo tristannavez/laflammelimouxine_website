@@ -8,8 +8,8 @@
   transform: rotate(180deg) translateY(85%);
   right: 45px;
   z-index: 10;
-  color : white;
   &.cs-left_side {
+    color: $white;
     right: initial;
     left: 45px;
   }
@@ -280,7 +280,7 @@
   .cs-hero_subtitle {
     font-size: 18px;
     line-height: 1.9em;
-    color: white;
+    color: $white;
     max-width: 650px;
     margin-left: auto;
     margin-bottom: 95px;
