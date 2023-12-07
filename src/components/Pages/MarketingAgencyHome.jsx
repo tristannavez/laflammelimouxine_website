@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Cta from '../Cta';
 import Div from '../Div';
 import Hero5 from '../Hero/Hero5';
 import LogoList from '../LogoList';
