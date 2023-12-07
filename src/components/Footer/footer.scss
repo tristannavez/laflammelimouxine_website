@@ -1,7 +1,9 @@
+@import '../../scss/default/color_variable';
+
 .cs-fooer_main {
   padding: 50px 0 35px;
-  background-color: black;
-  color: white;
+  background-color: $black;
+  color: $white;
   overflow: hidden;
   max-height: 280px;
 }
@@ -29,7 +31,7 @@
     border-radius: 50%;
     border: 2px solid white;
     margin: 7px;
-    color: white;
+    color: $white;
     &:hover {
       border-color: #00f;
       transform: scale(1.08);
@@ -43,11 +45,11 @@
 .cs-newsletter.cs-style1 {
   .cs-newsletter_input {
     background-color: #000;
-    color: white;
+    color: $white;
   }
 
   .cs-newsletter_btn {
-    color: white;
+    color: $white;
     background-color: #00f;
     &:before {
       background: rgba(0, 0, 0, 0.4);
@@ -65,7 +67,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  color: white;
+  color: $white;
   border-top: 1px solid #ccc;
 
   > * {
@@ -83,7 +85,7 @@
     border: none;
     padding: 10px 15px;
     font-size: 16px;
-    color: white;
+    color: $white;
     border-radius: 5px;
     transition: background-color 0.3s ease-in-out;
 
