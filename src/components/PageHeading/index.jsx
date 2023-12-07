@@ -10,10 +10,13 @@ export default function PageHeading({ title, bgSrc, pageLinkText }) {
     >
       <Div className="container">
         <Div className="cs-page_heading_in">
+          <Div className="cs-page_heading_logo">
+            <img src="/images/logo_flamme.png" alt="Logo Flamme" />
+          </Div>
           <h1 className="cs-page_title cs-font_50 cs-white_color">{title}</h1>
           <ol className="breadcrumb text-uppercase">
             <li className="breadcrumb-item">
-              <Link to="/">Home</Link>
+              <Link to="/">Accueil</Link>
             </li>
             <li className="breadcrumb-item active">{pageLinkText}</li>
           </ol>
