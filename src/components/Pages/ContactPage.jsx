@@ -80,7 +80,6 @@ export default function ContactPage() {
           title="Google Map"
         />
       </Div>
-      <Spacing lg="50" md="40" />
     </>
   );
 }
