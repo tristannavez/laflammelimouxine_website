@@ -10,7 +10,7 @@ import SectionHeading from '../SectionHeading';
 import ServiceList from '../ServiceList';
 
 export default function MarketingAgencyHome() {
-  pageTitle('La Flamme Limouxine');
+  pageTitle('Accueil');
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
