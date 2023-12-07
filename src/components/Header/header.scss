@@ -150,6 +150,7 @@
 }
 .cs-side_header {
   position: fixed;
+  color : white;
   top: 0;
   right: 0px;
   width: 100%;
@@ -183,6 +184,7 @@
     transition: all 0.4s ease;
   }
   .cs-side_header_heading {
+    color: white;
     font-size: 22px;
     line-height: 1.4em;
     margin: 0;
