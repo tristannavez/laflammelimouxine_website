@@ -4,6 +4,7 @@ import BlogPage from './components/Pages/BlogPage';
 import BlogDetailsPage from './components/Pages/BlogDetailsPage';
 import ContactPage from './components/Pages/ContactPage';
 import ErrorPage from './components/Pages/ErrorPage';
+// eslint-disable-next-line
 import Home from './components/Pages/Home';
 import PortfolioDetailsPage from './components/Pages/PortfolioDetailsPage';
 import ServiceDetailsPage from './components/Pages/ServiceDetailsPage';
