@@ -46,8 +46,8 @@ export default function ProductsPage() {
         <>
             <PageHeading
                 title="Produits"
-                bgSrc="images/portfolio_hero_bg.jpeg"
-                pageLinkText="Portfolio"
+                bgSrc="images/products_hero_bg.jpg"
+                pageLinkText="Produits"
             />
             <Spacing lg="145" md="80" />
             <Div className="container">
