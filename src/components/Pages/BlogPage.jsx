@@ -51,8 +51,8 @@ export default function BlogPage() {
                                     subtitle={item.attributes.subtitle}
                                     date={item.attributes.date}
                                     category={item.attributes.category}
-                                    categoryHref="/blog" // Remplacez par la bonne valeur
-                                    href="/blog/blog-details" // Remplacez par la bonne valeur
+                                    categoryHref="/blog" // Remplacer par la bonne valeur
+                                    href={`/blog/blog-details/${item.id}`}
                                 />
                                 {postData.length > index + 1 && <Spacing lg="95" md="60" />}
                             </Div>
