@@ -64,7 +64,7 @@ export default function ProductSlider2() {
         'slick-prev slick-arrow' + (currentSlide === 0 ? ' slick-disabled' : '')
       }
       aria-hidden="true"
-      aria-disabled={currentSlide === 0 ? true : false}
+      aria-disabled={currentSlide === 0}
     >
       <Icon icon="bi:arrow-left" />
     </div>
@@ -77,7 +77,7 @@ export default function ProductSlider2() {
         (currentSlide === slideCount - 1 ? ' slick-disabled' : '')
       }
       aria-hidden="true"
-      aria-disabled={currentSlide === slideCount - 1 ? true : false}
+      aria-disabled={currentSlide === slideCount - 1}
     >
       <Icon icon="bi:arrow-right" />
     </div>

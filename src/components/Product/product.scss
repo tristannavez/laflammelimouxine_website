@@ -15,7 +15,7 @@
   position: relative;
   height: 500px;
   display: block;
-  position: relative;
+
   .cs-portfolio_hover {
     position: absolute;
     height: 100%;
@@ -118,8 +118,8 @@
     }
     &:hover {
       .cs-portfolio_info_bg {
-        left: 0px;
-        top: 0px;
+        left: 0;
+        top: 0;
         opacity: 1;
       }
     }
@@ -151,12 +151,12 @@
     }
     &:hover {
       .cs-portfolio_title {
-        top: 0px;
+        top: 0;
         opacity: 1;
         transition-delay: 0.2s;
       }
       .cs-portfolio_subtitle {
-        top: 0px;
+        top: 0;
         opacity: 1;
         transition-delay: 0.3s;
       }
@@ -177,7 +177,7 @@
     .cs-portfolio_info {
       height: 100%;
       width: 100%;
-      border-radius: 0%;
+      border-radius: 0;
       padding: 30px 20px 30px 25px;
       bottom: 0;
       left: 0;
@@ -213,7 +213,6 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    position: absolute;
     height: 600px;
     width: 600px;
     border-radius: 50%;
@@ -243,7 +242,6 @@
     writing-mode: vertical-lr;
     transform: rotate(180deg) translateY(50%);
     left: calc(((100vw - 1300px) / 2) / 2);
-    margin: 0 0 0 -30px;
     white-space: nowrap;
     letter-spacing: 0.05em;
     color: transparent;
@@ -359,7 +357,7 @@
   }
   .cs-portfolio.cs-style2 .cs-portfolio_img_title,
   .cs-portfolio.cs-style2.cs-type1 .cs-portfolio_img_title {
-    margin: 0px 0 0 -20px;
+    margin: 0 0 0 -20px;
     font-size: 32px;
   }
 }
