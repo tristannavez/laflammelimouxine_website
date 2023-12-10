@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Button from '../Button';
 import Div from '../Div';
 import './post.scss';
+import Spacing from "../Spacing";
 
 export default function PostStyle2({ thumb, title, subtitle, date, category, categoryHref, href }) {
     return (
@@ -22,6 +23,8 @@ export default function PostStyle2({ thumb, title, subtitle, date, category, cat
                 </Div>
                 <Div className="cs-post_sub_title">{subtitle}</Div>
                 <Button btnLink={href} btnText="See More" variant="cs-post-button"/>
+                <Spacing lg="50" md="80" />
+                <Div className="cs-post-divider"></Div>
             </Div>
         </Div>
     );
