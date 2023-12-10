@@ -40,7 +40,7 @@ export default function ProductsPage() {
                 }
             })
             .catch(error => console.error('Error fetching categories:', error));
-    }, []);
+    }, [strapiUrl]);
 
     return (
         <>
