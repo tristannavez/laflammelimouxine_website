@@ -24,7 +24,6 @@ export default function PostStyle2({ thumb, title, subtitle, date, category, cat
                 <Div className="cs-post_sub_title">{subtitle}</Div>
                 <Button btnLink={href} btnText="Voir plus" variant="cs-post-button"/>
                 <Spacing lg="50" md="80" />
-                <Div className="cs-post-divider"></Div>
             </Div>
         </Div>
     );

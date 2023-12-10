@@ -34,9 +34,7 @@ export default function BlogPage() {
         window.scrollTo(0, 0);
     }, [strapiUrl]);
 
-
     const totalPages = Math.ceil(postData.length / itemsPerPage);
-
 
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
@@ -45,34 +43,34 @@ export default function BlogPage() {
     return (
         <>
             <PageHeading title="Nos actualités" bgSrc="/images/blog_hero_bg.jpeg" pageLinkText="Actualités" />
-            <Spacing lg="150" md="80" />
             <Div className="container">
+                <Spacing lg="150" md="80" />
+
                 <Div className="row">
-                    <Div className="col-lg-12">
-                        {displayedPosts.map((item, index) => (
-                            <Div key={index}>
-                                <PostStyle2
-                                    title={item.attributes.title}
-                                    thumb={`${strapiUrl}${item.attributes.image.data.attributes.formats.thumbnail.url}`}
-                                    subtitle={item.attributes.subtitle}
-                                    date={item.attributes.date}
-                                    category={item.attributes.category}
-                                    categoryHref="/blog" // Remplacer par la bonne valeur
-                                    href={`/blog/blog-details/${item.id}`}
-                                />
-                                {displayedPosts.length > index + 1 && <Spacing lg="95" md="60" />}
-                            </Div>
-                        ))}
-                        <Spacing lg="60" md="40" />
-                        <Pagination
-                            currentPage={currentPage}
-                            totalPages={totalPages}
-                            onPageChange={(pageNumber) => setCurrentPage(pageNumber)}
-                        />
-                    </Div>
+                    {displayedPosts.map((item, index) => (
+                        <Div key={index} className={`col-lg-6 mb-4 ${index % 2 === 0 ? 'order-lg-1' : ''}`}>
+                            <PostStyle2
+                                title={item.attributes.title}
+                                thumb={`${strapiUrl}${item.attributes.image.data.attributes.formats.thumbnail.url}`}
+                                subtitle={item.attributes.subtitle}
+                                date={item.attributes.date}
+                                category={item.attributes.category}
+                                categoryHref="/blog" // Remplacer par la bonne valeur
+                                href={`/blog/blog-details/${item.id}`}
+                            />
+                        </Div>
+                    ))}
                 </Div>
+
+                <Spacing lg="60" md="40" />
+                <Pagination
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    onPageChange={(pageNumber) => setCurrentPage(pageNumber)}
+                />
+
+                <Spacing lg="150" md="80" />
             </Div>
-            <Spacing lg="150" md="80" />
         </>
     );
 }
