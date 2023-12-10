@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { pageTitle } from '../../helper';
 import Cta from '../Cta';
 import PageHeading from '../PageHeading';
-import Portfolio from '../Product';
+import Product from '../Product';
 import Div from '../Div';
 import SectionHeading from '../SectionHeading';
 import Spacing from '../Spacing';
@@ -88,7 +88,7 @@ export default function ProductsPage() {
                                 }`}
                                 key={index}
                             >
-                                <Portfolio
+                                <Product
                                     title={product.attributes.title}
                                     subtitle={product.attributes.subtitle}
                                     href={`/portfolio/${product.id}`}

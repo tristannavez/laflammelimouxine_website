@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Div from '../Div';
 import './product.scss';
 
-export default function Portfolio({ href, src, title, subtitle, variant }) {
+export default function Product({ href, src, title, subtitle, variant }) {
   return (
     <Link
       to={href}
