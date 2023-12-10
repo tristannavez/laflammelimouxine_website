@@ -37,9 +37,9 @@ export default function BlogDetailsPage() {
   return (
       <>
         <PageHeading
-            title='Blog Single'
+            title={blogData.attributes?.title}
             bgSrc='/images/blog_details_hero_bg.jpeg'
-            pageLinkText={params.blogDetailsId}
+            pageLinkText={params.id}
         />
         <Spacing lg='150' md='80'/>
         <Div className="container">
