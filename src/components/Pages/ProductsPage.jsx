@@ -91,7 +91,7 @@ export default function ProductsPage() {
                                 <Product
                                     title={product.attributes.title}
                                     subtitle={product.attributes.subtitle}
-                                    href={`/portfolio/${product.id}`}
+                                    href={`/products/${product.id}`}
                                     src={
                                         product.attributes.image &&
                                         product.attributes.image.data &&
