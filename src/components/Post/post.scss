@@ -66,6 +66,7 @@
     }
     img {
       transition: all 0.6s ease;
+      width: 100%; // Ajout de cette ligne pour garantir une largeur de 100%
     }
   }
   a.cs-post_thumb {
@@ -81,22 +82,33 @@
   .cs-post_meta {
     font-size: 18px;
     margin-bottom: 15px;
+    color: #ec5201; // Ajout de cette ligne pour changer la couleur du texte
   }
   .cs-post_title {
     font-size: 38px;
     margin-bottom: 30px;
+    color: $gray; // Ajout de cette ligne pour changer la couleur du texte
   }
   .cs-post_sub_title {
     margin-bottom: 35px;
     line-height: 1.75em;
+    color: $gray; // Ajout de cette ligne pour changer la couleur du texte
   }
   p {
     margin-bottom: 45px;
     line-height: 1.75em;
+    color: $gray; // Ajout de cette ligne pour changer la couleur du texte
   }
   h3 {
     font-size: 30px;
     margin-bottom: 25px;
+    color: $gray; // Ajout de cette ligne pour changer la couleur du texte
+  }
+  .cs-post-button {
+    color: #000;  // Couleur du texte par défaut pour les boutons dans les articles
+  }
+  .cs-post-button:hover {
+    color: $accent;  // Couleur du texte au survol (couleur accent)
   }
   blockquote {
     font-size: 18px;
