@@ -9,6 +9,25 @@
     margin-bottom: 15px;
   }
 }
+.product-container {
+  position: relative;
+
+  .cs-portfolio_title_above {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    background-color: rgb(239, 127, 5);
+    padding: 5px 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
 .cs-portfolio.cs-style1 {
   border-radius: 15px;
   overflow: hidden;
