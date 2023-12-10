@@ -9,7 +9,7 @@ import Sidebar from '../Sidebar.jsx'
 import Spacing from '../Spacing'
 
 export default function BlogPage() {
-  pageTitle('Blog');
+  pageTitle('Actualités');
   const postData = [
     {
       thumb:'/images/post_4.jpeg',

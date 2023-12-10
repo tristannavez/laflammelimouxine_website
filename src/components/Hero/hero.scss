@@ -9,6 +9,7 @@
   right: 45px;
   z-index: 10;
   &.cs-left_side {
+    color: $white;
     right: initial;
     left: 45px;
   }
@@ -224,28 +225,87 @@
 }
 
 .cs-hero.cs-style3 {
-  background-color: #000;
+  background: url('https://www.cheminees-godin-isere.fr/images/background.jpg') center center/cover no-repeat fixed;
   padding: 240px 0 150px;
+  margin: 0;
   position: relative;
   overflow: hidden;
+  height: 100vh;
+  width: 100%;
+
   .cs-hero_title {
     font-size: 100px;
     font-weight: 700;
     margin-bottom: 60px;
     line-height: 1.6em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ajoutez cette ligne pour l'ombre */
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(49, 49, 49, 0.56);
+    z-index: 1;
+    mix-blend-mode: exclusion;
+  }
+
+  .cs-hero_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    img {
+      filter: drop-shadow(0 0 10px rgba(255, 223, 0, 0.7));
+      animation: pulseGlow 2s ease-in-out infinite; /* Ajoutez cette ligne pour l'animation */
+
+    }
+  }
+
+  @keyframes pulseGlow {
+    0% {
+      filter: drop-shadow(0 0 10px rgba(255, 223, 0, 0.7));
+    }
+    50% {
+      filter: drop-shadow(0 0 30px rgba(255, 21, 0, 0.7)); /* Ajustez la taille de la lueur selon vos préférences */
+    }
+    100% {
+      filter: drop-shadow(0 0 10px rgba(255, 223, 0, 0.7));
+    }
+  }
+
   .cs-hero_subtitle {
     font-size: 18px;
     line-height: 1.9em;
-    color: $primary;
+    color: $white;
     max-width: 650px;
     margin-left: auto;
     margin-bottom: 95px;
+    text-shadow: 4px 4px 4px rgb(0, 0, 0); /* Ajoutez cette ligne pour l'ombre */
+    animation: slideUp 2s ease-in-out infinite; /* Ajoutez cette ligne pour l'animation */
   }
+
+  @keyframes slideUp {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-50px); /* Ajustez la distance à déplacer selon vos préférences */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+
   .cs-hero_text {
     position: relative;
     z-index: 5;
   }
+
   &.cs-shape_wrap_1 {
     .cs-shape_1:nth-child(2) {
       top: 16%;
@@ -255,6 +315,8 @@
       left: 47%;
     }
   }
+
+
   .cs-circle_1 {
     height: 745px;
     width: 745px;

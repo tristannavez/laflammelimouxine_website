@@ -1,3 +1,5 @@
+@import '../../scss/default/color_variable';
+
 .cs-row_gap_20 {
   margin-left: -10px;
   margin-right: -10px;
@@ -325,7 +327,6 @@ hr {
       background-color: currentColor;
       transform: scaleX(0);
       transform-origin: 0 50%;
-      transition-property: transform;
       transition-property: transform, -webkit-transform;
       transition-duration: 0.6s;
       transition-timing-function: ease-out;
@@ -342,7 +343,7 @@ hr {
   &.cs-type1 {
     flex-direction: row-reverse;
     svg {
-      margin-left: 0px;
+      margin-left: 0;
       margin-right: 15px;
       transform: rotate(180deg);
     }
@@ -378,7 +379,6 @@ hr {
   padding: 13px 26px;
   transition: all 0.3s ease;
   border: transparent;
-  color: $primary;
   position: relative;
   line-height: 1.5em;
   font-weight: 600;
@@ -421,7 +421,7 @@ hr {
     transition: all 0.6s ease-out;
     &::before {
       background-color: #fff;
-      border-radius: 0px;
+      border-radius: 0;
     }
     &:hover {
       color: #000;
@@ -628,7 +628,7 @@ label {
 }
 @media screen and (max-width: 991px) {
   .cs-left_space_30 {
-    padding-left: 0px;
+    padding-left: 0;
   }
   .cs-font_14_sm {
     font-size: 14px;
@@ -695,8 +695,8 @@ label {
     position: absolute;
     height: 50%;
     width: 100%;
-    left: 0%;
-    top: 0%;
+    left: 0;
+    top: 0;
     background-color: #000;
   }
 }
@@ -735,7 +735,6 @@ label {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  display: block;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -900,8 +899,8 @@ label {
 }
 
 .cs-shape_1 {
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
   border-top: 9px solid transparent;
   border-bottom: 9px solid transparent;
   border-left: 14px solid $accent;
@@ -1086,6 +1085,17 @@ label {
   .cs-page_heading_in {
     display: inline-block;
   }
+  .cs-page_heading_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    img {
+      filter: drop-shadow(0 0 10px rgba(255, 223, 0, 0.7));
+      animation: pulseGlow 2s ease-in-out infinite;
+      width: 80px;
+    }
+  }
   .breadcrumb {
     justify-content: flex-end;
     margin-bottom: 0;
@@ -1201,7 +1211,7 @@ label {
     display: block;
     border: none;
     width: 100%;
-    filter: grayscale(100%) invert(90%) contrast(120%);
+    filter: grayscale(40%) invert(90%) contrast(120%);
   }
   &.cs-type1 {
     height: 100%;
@@ -1226,7 +1236,6 @@ label {
     position: absolute;
     top: 0;
     left: -80%;
-    z-index: 2;
     width: 50%;
     height: 100%;
     background: linear-gradient(
@@ -1282,7 +1291,6 @@ label {
   position: fixed;
   bottom: -60px;
   right: 40px;
-  color: #fff;
   padding: 5px;
   height: 50px;
   width: 50px;
@@ -1294,7 +1302,7 @@ label {
   z-index: 10;
   background-color: #000000;
   color: $accent;
-  box-shadow: 0px 1px 5px 1px rgba($black, 0.2);
+  box-shadow: 0 1px 5px 1px rgba($black, 0.2);
   border-radius: 50%;
   &:hover {
     background-color: $accent;
