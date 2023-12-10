@@ -10,6 +10,8 @@ import config from '../../config/config';
 export default function BlogPage() {
     pageTitle('Actualités');
     const [postData, setPostData] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 10;
     const strapiUrl = config.strapiUrl;
 
     useEffect(() => {
@@ -32,18 +34,22 @@ export default function BlogPage() {
         window.scrollTo(0, 0);
     }, [strapiUrl]);
 
+
+    const totalPages = Math.ceil(postData.length / itemsPerPage);
+
+
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const displayedPosts = postData.slice(startIndex, endIndex);
+
     return (
         <>
-            <PageHeading
-                title="Nos actualités"
-                bgSrc="/images/blog_hero_bg.jpeg"
-                pageLinkText="Actualités"
-            />
+            <PageHeading title="Nos actualités" bgSrc="/images/blog_hero_bg.jpeg" pageLinkText="Actualités" />
             <Spacing lg="150" md="80" />
             <Div className="container">
                 <Div className="row">
                     <Div className="col-lg-12">
-                        {postData.map((item, index) => (
+                        {displayedPosts.map((item, index) => (
                             <Div key={index}>
                                 <PostStyle2
                                     title={item.attributes.title}
@@ -54,11 +60,15 @@ export default function BlogPage() {
                                     categoryHref="/blog" // Remplacer par la bonne valeur
                                     href={`/blog/blog-details/${item.id}`}
                                 />
-                                {postData.length > index + 1 && <Spacing lg="95" md="60" />}
+                                {displayedPosts.length > index + 1 && <Spacing lg="95" md="60" />}
                             </Div>
                         ))}
                         <Spacing lg="60" md="40" />
-                        <Pagination />
+                        <Pagination
+                            currentPage={currentPage}
+                            totalPages={totalPages}
+                            onPageChange={(pageNumber) => setCurrentPage(pageNumber)}
+                        />
                     </Div>
                 </Div>
             </Div>
