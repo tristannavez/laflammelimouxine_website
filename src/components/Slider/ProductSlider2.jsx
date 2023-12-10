@@ -1,10 +1,10 @@
 import React from 'react';
-import Portfolio from '../Portfolio';
+import Portfolio from '../Product';
 import Div from '../Div';
 import Slider from 'react-slick';
 import { Icon } from '@iconify/react';
 
-export default function PortfolioSlider2() {
+export default function ProductSlider2() {
   const portfolioData = [
     {
       title: 'Colorful Art Work',

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Div from '../Div';
-import './portfolio.scss';
+import './product.scss';
 
 export default function Portfolio({ href, src, title, subtitle, variant }) {
   return (

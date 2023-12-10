@@ -8,9 +8,9 @@ import Div from '../Div'
 import SectionHeading from '../SectionHeading'
 import Spacing from '../Spacing'
 
-export default function PortfolioDetailsPage() {
+export default function ProductDetailsPage() {
   const params = useParams()
-  pageTitle('Portfolio Details');
+  pageTitle('Product Details');
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])

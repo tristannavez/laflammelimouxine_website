@@ -7,7 +7,7 @@ import Spacing from '../Spacing';
 import SectionHeading from '../SectionHeading';
 import MovingText2 from '../MovingText/MovingText2';
 import VideoModal from '../VideoModal';
-import Portfolio from '../Portfolio';
+import Portfolio from '../Product';
 import { Icon } from '@iconify/react';
 import TimelineSlider from '../Slider/TimelineSlider';
 import TestimonialSlider from '../Slider/TestimonialSlider';
