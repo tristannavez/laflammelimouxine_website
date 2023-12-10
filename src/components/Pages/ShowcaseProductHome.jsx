@@ -4,8 +4,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import Hero6 from '../Hero/Hero6';
 
-export default function ShowcasePortfolioHome() {
-  pageTitle('Showcase Portfolio');
+export default function ShowcaseProductHome() {
+  pageTitle('Showcase Product');
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

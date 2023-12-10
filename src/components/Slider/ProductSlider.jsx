@@ -1,9 +1,9 @@
 import React from 'react'
-import Portfolio from '../Portfolio'
+import Portfolio from '../Product'
 import Div from '../Div'
 import Slider from 'react-slick';
 
-export default function PortfolioSlider() {
+export default function ProductSlider() {
   const portfolioData = [
     {
       title:'Colorful Art Work',

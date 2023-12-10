@@ -5,15 +5,15 @@ import Div from '../Div';
 import Hero3 from '../Hero/Hero3';
 import LogoList from '../LogoList';
 import MovingText from '../MovingText';
-import Portfolio2 from '../Portfolio/Portfolio2';
-import Portfolio3 from '../Portfolio/Portfolio3';
+import Product2 from '../Product/Product2';
+import Product3 from '../Product/Product3';
 import SectionHeading from '../SectionHeading';
 import TestimonialSlider from '../Slider/TestimonialSlider';
 import Spacing from '../Spacing';
 import { pageTitle } from '../../helper';
 
-export default function CreativePortfolioHome() {
-  pageTitle('Creative Portfolio');
+export default function CreativeProductHome() {
+  pageTitle('Creative Product');
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -74,12 +74,12 @@ export default function CreativePortfolioHome() {
       />
       {/* End Hero Section */}
 
-      {/* Start Portfolio Section */}
+      {/* Start Product Section */}
       <Spacing lg="150" md="80" />
       {portfolioData.map((item, index) =>
         index % 2 === 0 ? (
           <Div key={index}>
-            <Portfolio2
+            <Product2
               title={item.title}
               subtitle={item.subtitle}
               btnText={item.btnText}
@@ -91,7 +91,7 @@ export default function CreativePortfolioHome() {
           </Div>
         ) : (
           <Div key={index}>
-            <Portfolio3
+            <Product3
               title={item.title}
               subtitle={item.subtitle}
               btnText={item.btnText}
@@ -103,7 +103,7 @@ export default function CreativePortfolioHome() {
           </Div>
         ),
       )}
-      {/* End Portfolio Section */}
+      {/* End Product Section */}
 
       {/* Start Case Study Section */}
       <Spacing lg="45" md="10" />

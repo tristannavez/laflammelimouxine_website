@@ -3,7 +3,7 @@ import Button from '../Button'
 import Div from '../Div'
 import Spacing from '../Spacing'
 
-export default function Portfolio2({title, subtitle, btnText, btnLink, imageUrl, category}) {
+export default function Product2({title, subtitle, btnText, btnLink, imageUrl, category}) {
   const [hovered, setHovered] = useState(false);
   return (
     <Div className="cs-portfolio cs-style2">

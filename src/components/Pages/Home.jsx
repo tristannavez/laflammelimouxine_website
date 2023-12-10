@@ -8,7 +8,7 @@ import Spacing from '../Spacing';
 import Cta from '../Cta';
 import LogoList from '../LogoList';
 import MovingText from '../MovingText';
-import PortfolioSlider from '../Slider/PortfolioSlider';
+import ProductSlider from '../Slider/ProductSlider';
 import PostSlider from '../Slider/PostSlider';
 import TestimonialSlider from '../Slider/TestimonialSlider';
 import TeamSlider from '../Slider/TeamSlider';
@@ -144,7 +144,7 @@ export default function Home() {
       </Div>
       {/* End Service Section */}
 
-      {/* Start Portfolio Section */}
+      {/* Start Product Section */}
       <Spacing lg="150" md="50" />
       <Div>
         <Div className="container">
@@ -155,9 +155,9 @@ export default function Home() {
           />
           <Spacing lg="90" md="45" />
         </Div>
-        <PortfolioSlider />
+        <ProductSlider />
       </Div>
-      {/* End Portfolio Section */}
+      {/* End Product Section */}
 
       {/* Start Awards Section */}
       <Spacing lg="150" md="80" />
