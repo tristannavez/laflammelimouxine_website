@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Div from '../Div';
+import Hero from '../Hero';
 import Hero5 from '../Hero/Hero5';
 import LogoList from '../LogoList';
 import MovingText from '../MovingText';

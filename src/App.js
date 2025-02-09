@@ -3,8 +3,6 @@ import ServicesPage from './components/Pages/ServicesPage';
 import ServicesDetailsPage from './components/Pages/ServicesDetailsPage';
 import ContactPage from './components/Pages/ContactPage';
 import ErrorPage from './components/Pages/ErrorPage';
-// eslint-disable-next-line
-import Home from './components/Pages/Home';
 import ProductDetailsPage from './components/Pages/ProductDetailsPage';
 import ProductsPage from './components/Pages/ProductsPage';
 import HomePage from './components/Pages/HomePage';
