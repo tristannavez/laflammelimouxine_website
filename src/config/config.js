@@ -1,6 +1,6 @@
 // config/config.js
 const config = {
-    strapiUrl: 'http://localhost:1338',
+    strapiUrl: 'http://localhost:1337',
 };
 
 export default config;
