@@ -64,7 +64,7 @@ export default function ContactPage() {
               </Div>
               <Div className="col-sm-12">
                 <button className="cs-btn cs-style1">
-                  <span>Send Message</span>
+                  <span>Envoyer le message</span>
                   <Icon icon="bi:arrow-right" />
                 </button>
               </Div>
