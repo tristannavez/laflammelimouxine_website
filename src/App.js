@@ -7,7 +7,7 @@ import ErrorPage from './components/Pages/ErrorPage';
 import Home from './components/Pages/Home';
 import ProductDetailsPage from './components/Pages/ProductDetailsPage';
 import ProductsPage from './components/Pages/ProductsPage';
-import MarketingAgencyHome from './components/Pages/MarketingAgencyHome';
+import HomePage from './components/Pages/HomePage';
 import Layout from './components/Layout';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<MarketingAgencyHome />} />
+          <Route index element={<HomePage />} />
           <Route path="products" element={<ProductsPage />} />
           <Route
               path="products/:productId"
