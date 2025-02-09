@@ -26,8 +26,8 @@ export default function Hero5({
               <span style={{ color: 'white' }}>{leftPart} </span> 
               <span style={{ color: 'orange' }}>{rightPart}</span>
             </h1>
-            <Div className="cs-hero_subtitle text-end">{subtitle}</Div>
             <Button btnLink={btnLink} btnText={btnText} />
+            <span className="cs-hero_subtitle text-end">{subtitle}</span>
           </Div>
         </Div>
         <VerticalLinks
