@@ -56,7 +56,7 @@ export default function ProductsPage() {
                     <Div className="cs-filter_menu cs-style1">
                         <ul className="cs-mp0 cs-center">
                             <li className={active === 'all' ? 'active' : ''} onClick={() => setActive('all')}>
-                                <span>All</span>
+                                <span>Tous</span>
                             </li>
                             {categories.map(category => (
                                 <li
