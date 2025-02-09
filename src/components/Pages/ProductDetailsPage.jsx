@@ -33,7 +33,7 @@ export default function ProductDetailsPage() {
         <>
             {productDetails && (
                 <PageHeading
-                    title={productDetails.attributes.title}
+                    title={productDetails.title}
                     bgSrc="../images/productsdetails_hero_bg.jpg"
                     pageLinkText={params.productId}
                 />
@@ -47,7 +47,7 @@ export default function ProductDetailsPage() {
                         <Div className="row">
                             <Div className="col-lg-6">
                                 <img
-                                    src={`${strapiUrl}${productDetails.attributes.image.data.attributes.formats.thumbnail.url}`}
+                                    src={`${strapiUrl}${productDetails.image.formats.thumbnail.url}`}
                                     alt="Product Details"
                                     className="cs-radius_15 w-100"
                                 />
@@ -55,11 +55,11 @@ export default function ProductDetailsPage() {
 
                             <Div className="col-lg-6">
                                 <SectionHeading
-                                    title={productDetails.attributes.title}
-                                    subtitle={productDetails.attributes.subtitle}
+                                    title={productDetails.title}
+                                    subtitle={productDetails.subtitle}
                                 />
                                 <Spacing lg='40' md='20' />
-                                <p>{productDetails.attributes.description}</p>
+                                <p>{productDetails.description}</p>
                             </Div>
                         </Div>
 
@@ -73,8 +73,8 @@ export default function ProductDetailsPage() {
                                 <Div>
                                     <h3 className='cs-accent_color cs-font_22 cs-font_18_sm cs-m0'>Catégorie(s):</h3>
                                     <p className='cs-m0'>
-                                        {productDetails.attributes.categories?.data
-                                            ?.map(category => category.attributes.name)
+                                        {productDetails.categories?.data
+                                            ?.map(category => category.name)
                                             .join(', ')}
                                     </p>
                                 </Div>
