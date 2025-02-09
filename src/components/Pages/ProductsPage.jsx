@@ -119,7 +119,7 @@ export default function ProductsPage() {
                 </Div>
             </Div>
             <Spacing lg="145" md="80" />
-            <Cta title="04 68 20 07 05" bgSrc="/images/cta_bg_2.jpeg" variant="rounded-0" />
+            <Cta title="04 68 20 07 05" bgSrc="/images/cta_bg.jpeg" variant="rounded-0" />
         </>
     );
 }
