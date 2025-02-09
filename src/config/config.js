@@ -1,6 +1,5 @@
-// config/config.js
 const config = {
-    strapiUrl: 'http://localhost:1337',
+    strapiUrl: process.env.BACKEND_URL || 'http://localhost:1337',
 };
 
 export default config;
