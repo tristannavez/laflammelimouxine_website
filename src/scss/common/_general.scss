@@ -474,13 +474,15 @@ hr {
   border-radius: 15px;
   outline: none;
   transition: all 0.3s ease;
-  border: 2px solid #999696;
+  border: 2px solid #ccc;
   background-color: transparent;
-  color: #fff;
+  color: $black;
   &:focus {
     border-color: $accent;
   }
 }
+
+
 label {
   margin-bottom: 12px;
 }
