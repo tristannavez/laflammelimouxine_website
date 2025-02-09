@@ -30,7 +30,7 @@ export default function ServiceList() {
       title: 'Dépannage',
       subtitle:
         'La flamme Limouxine est votre entreprise de dépannage d\'appareil de chauffage bois (bûche et  granulés) à Limoux.',
-      imgUrl: '/images/service_9.jpg',
+      imgUrl: '/images/service_10.jpeg',
       href: '/service/service-details',
     },
   ];
