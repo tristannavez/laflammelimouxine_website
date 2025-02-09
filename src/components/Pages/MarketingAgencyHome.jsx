@@ -5,7 +5,6 @@ import LogoList from '../LogoList';
 import MovingText from '../MovingText';
 import Spacing from '../Spacing';
 import { pageTitle } from '../../helper';
-import PostSlider from '../Slider/PostSlider';
 import SectionHeading from '../SectionHeading';
 import ServiceList from '../ServiceList';
 
@@ -17,11 +16,11 @@ export default function MarketingAgencyHome() {
   const heroSocialLinks = [
     {
       name: 'Linkedin',
-      links: '/',
+      links: 'https://www.linkedin.com/in/la-flamme-limouxine-6218b5218/?originalSubdomain=fr',
     },
     {
-      name: 'Twitter',
-      links: '/',
+      name: 'Facebook',
+      links: 'https://www.facebook.com/laflammelimouxine',
     },
   ];
 
