@@ -11,19 +11,20 @@ export default function ServicesPage() {
     pageTitle('Services');
     const [postData, setPostData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
+    const [totalPages, setTotalPages] = useState(1);
     const itemsPerPage = 10;
     const strapiUrl = config.strapiUrl;
 
     useEffect(() => {
         const fetchBlogPosts = async () => {
             try {
-                const response = await fetch(`${strapiUrl}/api/blog-posts?populate=*`);
+                const response = await fetch(`${strapiUrl}/api/blog-posts?populate=image&pagination[start]=${(currentPage - 1) * itemsPerPage}&pagination[limit]=${itemsPerPage}`);
                 const data = await response.json();
 
                 if (data && data.data) {
                     setPostData(data.data);
-                } else {
-                    console.error('Invalid API response:', data);
+                    const totalPosts = data.meta.pagination.total;
+                    setTotalPages(Math.ceil(totalPosts / itemsPerPage));
                 }
             } catch (error) {
                 console.error('Error fetching blog posts:', error);
@@ -32,43 +33,36 @@ export default function ServicesPage() {
 
         fetchBlogPosts();
         window.scrollTo(0, 0);
-    }, [strapiUrl]);
+    }, [strapiUrl, currentPage]);
 
-    const totalPages = Math.ceil(postData.length / itemsPerPage);
-
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    const displayedPosts = postData.slice(startIndex, endIndex);
+    const displayedPosts = postData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
     return (
         <>
             <PageHeading title="Nos services" bgSrc="/images/service_hero_bg.jpg" pageLinkText="Services" />
             <Div className="container">
                 <Spacing lg="150" md="80" />
-
                 <Div className="row">
                     {displayedPosts.map((item, index) => (
                         <Div key={index} className={`col-lg-6 mb-4 ${index % 2 === 0 ? 'order-lg-1' : ''}`}>
                             <PostStyle2
-                                title={item.attributes.title}
-                                thumb={`${strapiUrl}${item.attributes.image.data.attributes.formats.thumbnail.url}`}
-                                subtitle={item.attributes.subtitle}
-                                date={item.attributes.date}
-                                category={item.attributes.category}
+                                title={item.title}
+                                thumb={`${strapiUrl}${item.image.formats.thumbnail.url}`}
+                                subtitle={item.subtitle}
+                                date={item.date}
+                                category={item.category}
                                 categoryHref="/services" 
                                 href={`/services/services-details/${item.id}`}
                             />
                         </Div>
                     ))}
                 </Div>
-
                 <Spacing lg="60" md="40" />
                 <Pagination
                     currentPage={currentPage}
                     totalPages={totalPages}
                     onPageChange={(pageNumber) => setCurrentPage(pageNumber)}
                 />
-
                 <Spacing lg="150" md="80" />
             </Div>
         </>
