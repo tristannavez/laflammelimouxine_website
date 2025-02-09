@@ -17,25 +17,6 @@ export default function Footer() {
 
   const [isContentVisible, setIsContentVisible] = useState(false);
 
-  const serviceMenu = [
-    {
-      title: 'Vente',
-      href: '/service/service-details'
-    },
-    {
-      title: 'Installation',
-      href: '/service/service-details'
-    },
-    {
-      title: 'Entretien',
-      href: '/service/service-details'
-    },
-    {
-      title: 'Dépannage',
-      href: '/service/service-details'
-    },
-  ];
-
   const toggleContentVisibility = () => {
     setIsContentVisible(!isContentVisible);
   };
@@ -45,7 +26,7 @@ export default function Footer() {
         <Div className="cs-fooer_main" style={{ display: isContentVisible ? 'block' : 'none' }}>
           <Div className="container">
             <Div className="row">
-              <Div className="col-lg-6 col-sm-6">
+              <Div className="col-lg-8 col-sm-6">
                 <Div className="cs-footer_item">
                   <TextWidget
                       logoSrc="/images/logo.png"
@@ -53,11 +34,6 @@ export default function Footer() {
                       text="Vente, installation, entretien et dépannage de chauffage bois et granulé à Limoux"
                   />
                   <SocialWidget />
-                </Div>
-              </Div>
-              <Div className="col-lg-2 col-sm-6">
-                <Div className="cs-footer_item">
-                  <MenuWidget menuItems={serviceMenu} menuHeading="Services" />
                 </Div>
               </Div>
               <Div className="col-lg-4 col-sm-6">
