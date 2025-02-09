@@ -8,7 +8,7 @@ import Spacing from '../Spacing';
 import config from '../../config/config';
 
 export default function ServicesPage() {
-    pageTitle('Actualités');
+    pageTitle('Services');
     const [postData, setPostData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 10;
