@@ -284,8 +284,7 @@
     max-width: 650px;
     margin-left: auto;
     margin-bottom: 95px;
-    text-shadow: 4px 4px 4px rgb(0, 0, 0); /* Ajoutez cette ligne pour l'ombre */
-    animation: slideUp 2s ease-in-out infinite; /* Ajoutez cette ligne pour l'animation */
+    text-shadow: 4px 4px 4px rgb(0, 0, 0);
   }
 
   @keyframes slideUp {
