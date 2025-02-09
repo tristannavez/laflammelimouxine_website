@@ -11,7 +11,7 @@ export default function Footer() {
   const copyrightLinks = [
     {
       title: 'Mentions légales',
-      href: '/'
+      href: '/legalnotice'
     }
   ];
 
