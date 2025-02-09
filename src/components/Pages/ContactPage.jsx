@@ -23,7 +23,7 @@ export default function ContactPage() {
     message: "",
   });
 
-  const [status, setStatus] = useState(""); // Pour afficher un message de succès ou d'erreur
+  const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -31,8 +31,7 @@ export default function ContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus(""); // Reset message
-
+    setStatus("");
     console.log("Formulaire soumis :", formData);
 
     emailjs
