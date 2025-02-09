@@ -52,7 +52,7 @@ export default function ServicesPage() {
                                 date={item.date}
                                 category={item.category}
                                 categoryHref="/services" 
-                                href={`/services/services-details/${item.id}`}
+                                href={`/services/services-details/${item.documentId}`}
                             />
                         </Div>
                     ))}
