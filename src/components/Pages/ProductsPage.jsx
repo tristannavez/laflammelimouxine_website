@@ -90,7 +90,7 @@ export default function ProductsPage() {
                                 <Product
                                     title={product.title}
                                     subtitle={product.subtitle}
-                                    href={`/products/${product.id}`}
+                                    href={`/products/${product.documentId}`}
                                     src={
                                         `${strapiUrl}${product.image.formats.thumbnail.url}`
                                     }
