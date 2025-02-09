@@ -16,7 +16,6 @@ export default function PostStyle2({ thumb, title, subtitle, date, category, cat
             </Link>
             <Div className="cs-post_info">
                 <Div className="cs-post_meta cs-style1 cs-ternary_color cs-semi_bold cs-primary_font">
-                    <span className="cs-posted_by">{date}</span>
                     <Link to={categoryHref} className="cs-post_avatar">
                         {category}
                     </Link>

@@ -7,7 +7,7 @@ import Div from '../Div';
 import Spacing from '../Spacing';
 import config from '../../config/config';
 
-export default function BlogDetailsPage() {
+export default function ServicesDetailsPage() {
   const [blogData, setBlogData] = useState({});
   const params = useParams();
   const strapiUrl = config.strapiUrl;
@@ -38,7 +38,7 @@ export default function BlogDetailsPage() {
       <>
         <PageHeading
             title={blogData.attributes?.title}
-            bgSrc='/images/blog_details_hero_bg.jpeg'
+            bgSrc='/images/blog_hero_bg.jpeg'
             pageLinkText={params.id}
         />
         <Spacing lg='150' md='80'/>
@@ -62,7 +62,6 @@ export default function BlogDetailsPage() {
                   </Div>
                   <h2 className="cs-post_title">{blogData.attributes?.title}</h2>
                   <p>{blogData.attributes?.content}</p>
-                  {/* ... (autres éléments du blog) */}
                 </Div>
               </Div>
             </Div>

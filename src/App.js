@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-import BlogPage from './components/Pages/BlogPage';
-import BlogDetailsPage from './components/Pages/BlogDetailsPage';
+import ServicesPage from './components/Pages/ServicesPage';
+import ServicesDetailsPage from './components/Pages/ServicesDetailsPage';
 import ContactPage from './components/Pages/ContactPage';
 import ErrorPage from './components/Pages/ErrorPage';
 // eslint-disable-next-line
@@ -20,8 +20,8 @@ function App() {
           <Route
               path="products/:productId"
               element={<ProductDetailsPage/>}></Route>
-          <Route path="blog" element={<BlogPage />} />
-          <Route path="blog/blog-details/:id" element={<BlogDetailsPage />} />
+          <Route path="services" element={<ServicesPage />} />
+          <Route path="services/services-details/:id" element={<ServicesDetailsPage />} />
           <Route path="contact" element={<ContactPage />} />
         </Route>
         <Route

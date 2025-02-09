@@ -1,96 +1,76 @@
-import React, { useEffect } from 'react'
-import { pageTitle } from '../../helper'
-import Card from '../Card'
-import Cta from '../Cta'
-import PageHeading from '../PageHeading'
-import Div from '../Div'
-import SectionHeading from '../SectionHeading'
-import TestimonialSlider from '../Slider/TestimonialSlider'
-import Spacing from '../Spacing'
+import React, { useEffect, useState } from 'react';
+import { pageTitle } from '../../helper';
+import PageHeading from '../PageHeading';
+import Pagination from '../Pagination';
+import PostStyle2 from '../Post/PostStyle2';
+import Div from '../Div';
+import Spacing from '../Spacing';
+import config from '../../config/config';
 
 export default function ServicesPage() {
-  pageTitle('Services');
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
-  return (
-    <>
-      <PageHeading 
-        title='Services'
-        bgSrc='images/service_hero_bg.jpg'
-        pageLinkText='Services'
-      />
-      <Spacing lg='150' md='80'/>
-      <Div className='cs-shape_wrap_4'>
-        <Div className="cs-shape_4"></Div>
-        <Div className="cs-shape_4"></Div>
-        <Div className="container">
-          <Div className="row">
-            <Div className="col-xl-4">
-              <SectionHeading
-                title='Les services que nous proposons'
-                subtitle='Nos services'
-              />
-              <Spacing lg='90' md='45'/>
+    pageTitle('Actualités');
+    const [postData, setPostData] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 10;
+    const strapiUrl = config.strapiUrl;
+
+    useEffect(() => {
+        const fetchBlogPosts = async () => {
+            try {
+                const response = await fetch(`${strapiUrl}/api/blog-posts?populate=*`);
+                const data = await response.json();
+
+                if (data && data.data) {
+                    setPostData(data.data);
+                } else {
+                    console.error('Invalid API response:', data);
+                }
+            } catch (error) {
+                console.error('Error fetching blog posts:', error);
+            }
+        };
+
+        fetchBlogPosts();
+        window.scrollTo(0, 0);
+    }, [strapiUrl]);
+
+    const totalPages = Math.ceil(postData.length / itemsPerPage);
+
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const displayedPosts = postData.slice(startIndex, endIndex);
+
+    return (
+        <>
+            <PageHeading title="Nos services" bgSrc="/images/service_hero_bg.jpg" pageLinkText="Services" />
+            <Div className="container">
+                <Spacing lg="150" md="80" />
+
+                <Div className="row">
+                    {displayedPosts.map((item, index) => (
+                        <Div key={index} className={`col-lg-6 mb-4 ${index % 2 === 0 ? 'order-lg-1' : ''}`}>
+                            <PostStyle2
+                                title={item.attributes.title}
+                                thumb={`${strapiUrl}${item.attributes.image.data.attributes.formats.thumbnail.url}`}
+                                subtitle={item.attributes.subtitle}
+                                date={item.attributes.date}
+                                category={item.attributes.category}
+                                categoryHref="/services" 
+                                href={`/services/services-details/${item.id}`}
+                            />
+                        </Div>
+                    ))}
+                </Div>
+
+                <Spacing lg="60" md="40" />
+                <Pagination
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    onPageChange={(pageNumber) => setCurrentPage(pageNumber)}
+                />
+
+                <Spacing lg="150" md="80" />
             </Div>
-            <Div className='col-xl-8'>
-              <Div className='row'>
-                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6'>
-                  <Card
-                    title='Vente'
-                    link='/service/ui-ux-design'
-                    src='https://img-ccmbg-1.lefigaro.fr/3ZrZL94XUg-8cZkPsPMQMDH2iPk=/1500x/smart/5e59febf493744ec91c589ae7a63848c/ccmcms-figaroimmobilier/29532249.jpg'
-                    alt='Service'
-                  />
-                  <Spacing lg='0' md='30'/>
-                </Div>
-                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6'>
-                  <Card
-                    title='Installation'
-                    link='/service/reactjs-development'
-                    src='https://media.istockphoto.com/id/1427260980/fr/photo/un-po%C3%AAle-%C3%A0-bois-avec-du-bois-et-des-granul%C3%A9s.jpg?s=612x612&w=0&k=20&c=rVaag8SpdLlKHdfhelTbdVfFTvEwsYPuHJm5XpoDFjw='
-                    alt='Service'
-                  />
-                  <Spacing lg='0' md='30'/>
-                </Div>
-                <Div className='col-lg-3 col-sm-6'>
-                  <Card
-                    title='Entretien'
-                    link='/service/digital-marketing'
-                    src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfOPwnsfrleiEdGCqDjR8uKYT5Jsa6jYWdNg&usqp=CAU'
-                    alt='Service'
-                  />
-                  <Spacing lg='0' md='30'/>
-                </Div>
-                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6'>
-                  <Card
-                    title='Dépannage'
-                    link='/service/technology'
-                    src='https://www.agecic.fr/91-medium_default/realiser-le-depannage-des-poeles-a-granules-de-bois-pellets.jpg'
-                    alt='Service'
-                  />
-                  <Spacing lg='0' md='30'/>
-                </Div>
-              </Div>
-            </Div>
-          </Div>
-        </Div>
-      </Div>
-      <Spacing lg='190' md='80'/>
-      <Div className="container">
-        <Cta 
-          title='Discutons de votre<br /> <i>projet</i> ensemble'
-          btnText='Nous contacter'
-          btnLink='/contact' 
-          bgSrc='/images/cta_bg.jpeg'
-        />
-      </Div>
-        <Spacing lg='30' md='80'/>
-        <TestimonialSlider/>
-      <Spacing lg='30' md='80'/>
-    </>
-  )
+        </>
+    );
 }
