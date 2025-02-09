@@ -18,7 +18,6 @@ export default function ProductsPage() {
     const strapiUrl = config.strapiUrl;
 
     useEffect(() => {
-        // Récupération des produits depuis l'API Strapi
         fetch(`${strapiUrl}/api/products?populate=*`)
             .then(response => response.json())
             .then(data => {
@@ -60,11 +59,11 @@ export default function ProductsPage() {
                             </li>
                             {categories.map(category => (
                                 <li
-                                    className={active === category.attributes.name ? 'active' : ''}
+                                    className={active === category.name ? 'active' : ''}
                                     key={category.id}
-                                    onClick={() => setActive(category.attributes.name)}
+                                    onClick={() => setActive(category.name)}
                                 >
-                                    <span>{category.attributes.name}</span>
+                                    <span>{category.name}</span>
                                 </li>
                             ))}
                         </ul>
@@ -77,7 +76,7 @@ export default function ProductsPage() {
                             if (active === 'all') {
                                 return true;
                             } else {
-                                return product.attributes.categories.data.some(category => category.attributes.name === active);
+                                return product.categories.data.some(category => category.name === active);
                             }
                         })
                         .slice(0, itemShow)
@@ -89,13 +88,11 @@ export default function ProductsPage() {
                                 key={index}
                             >
                                 <Product
-                                    title={product.attributes.title}
-                                    subtitle={product.attributes.subtitle}
+                                    title={product.title}
+                                    subtitle={product.subtitle}
                                     href={`/products/${product.id}`}
                                     src={
-                                        product.attributes.image &&
-                                        product.attributes.image.data &&
-                                        `${strapiUrl}${product.attributes.image.data.attributes.formats.thumbnail.url}`
+                                        `${strapiUrl}${product.image.formats.thumbnail.url}`
                                     }
                                     variant="cs-style1 cs-type1"
                                 />
