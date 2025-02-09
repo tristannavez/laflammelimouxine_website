@@ -7,6 +7,7 @@ import ProductDetailsPage from './components/Pages/ProductDetailsPage';
 import ProductsPage from './components/Pages/ProductsPage';
 import HomePage from './components/Pages/HomePage';
 import Layout from './components/Layout';
+import LegalNoticePage from './components/Pages/LegalNoticePage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="services" element={<ServicesPage />} />
           <Route path="services/services-details/:id" element={<ServicesDetailsPage />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="legalnotice" element={<LegalNoticePage />} />
         </Route>
         <Route
           path="/"
