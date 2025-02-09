@@ -22,8 +22,8 @@ export default function Hero5({
         </Div>
         <Div className="container">
           <Div className="cs-hero_text">
-            <h1 className="cs-hero_title text-end">
-              <span style={{ color: 'white' }}>{leftPart} </span>
+            <h1 className="cs-hero_title text-center">
+              <span style={{ color: 'white' }}>{leftPart} </span> 
               <span style={{ color: 'orange' }}>{rightPart}</span>
             </h1>
             <Div className="cs-hero_subtitle text-end">{subtitle}</Div>
