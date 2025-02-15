@@ -47,7 +47,7 @@ export default function ProductDetailsPage() {
                         <Div className="row">
                             <Div className="col-lg-6">
                                 <img
-                                    src={`${strapiUrl}${productDetails.image.formats.thumbnail.url}`}
+                                    src={`${productDetails.image.formats.thumbnail.url}`}
                                     alt="Product Details"
                                     className="cs-radius_15 w-100"
                                 />
@@ -79,7 +79,6 @@ export default function ProductDetailsPage() {
                                     </p>
                                 </Div>
 
-                                {/* Ajoutez d'autres détails du produit en fonction de votre structure de données */}
                             </Div>
                         </Div>
 

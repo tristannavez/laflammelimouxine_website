@@ -47,7 +47,7 @@ export default function ServicesPage() {
                         <Div key={index} className={`col-lg-6 mb-4 ${index % 2 === 0 ? 'order-lg-1' : ''}`}>
                             <PostStyle2
                                 title={item.title}
-                                thumb={`${strapiUrl}${item.image.formats.thumbnail.url}`}
+                                thumb={`${item.image.formats.thumbnail.url}`}
                                 subtitle={item.subtitle}
                                 date={item.date}
                                 category={item.category}
