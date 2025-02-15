@@ -92,7 +92,7 @@ export default function ProductsPage() {
                                     subtitle={product.subtitle}
                                     href={`/products/${product.documentId}`}
                                     src={
-                                        `${strapiUrl}${product.image.formats.thumbnail.url}`
+                                        `${product.image.formats.thumbnail.url}`
                                     }
                                     variant="cs-style1 cs-type1"
                                 />

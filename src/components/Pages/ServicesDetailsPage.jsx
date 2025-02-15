@@ -53,7 +53,7 @@ export default function ServicesDetailsPage() {
               <Div className="cs-post_thumb cs-radius_15">
                 {blogData?.image?.formats?.medium?.url && (
                   <img
-                      src={strapiUrl + blogData?.image?.formats?.medium?.url}
+                      src={blogData?.image?.formats?.medium?.url}
                       alt={blogData?.attributes?.image?.alternativeText || 'Post image'}
                       className="w-100 cs-radius_15"
                   />
