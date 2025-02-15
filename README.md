@@ -1,72 +1,97 @@
-# La flamme limouxine website
+# La Flamme Limouxine - Site Web
 
-# Getting Started with Create React App
+Ce repository contient le site web de **La Flamme Limouxine**, développé en **React**. Le site récupère dynamiquement les données depuis un backend développé avec **Strapi** [ici](https://github.com/tristannavez/laflammelimouxine_website_backend).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table des matières
 
-## Available Scripts
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Scripts disponibles](#scripts-disponibles)
+- [Configuration](#configuration)
+- [Déploiement](#déploiement)
 
-In the project directory, you can run:
+## Technologies
 
-### `npm start`
+- **React** : Bibliothèque JavaScript pour construire l'interface utilisateur.
+- **React Router** : Gestion de la navigation et du routage.
+- **Bootstrap** : Framework CSS pour un design responsive.
+- **Sass** : Préprocesseur CSS pour une gestion avancée des styles.
+- **EmailJS** : Envoi d'emails via le formulaire de contact.
+- **Autres dépendances** :
+    - `html-react-parser`
+    - `react-cart-lightgallery`
+    - `react-modal-image`
+    - `react-ripples`
+    - `react-slick`
+    - `react-water-wave`
+    - `swiper`
+    - ...et bien d'autres (voir le fichier `package.json` pour la liste complète).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Backend** : API développée avec [Strapi](https://strapi.io) (repository séparé).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. **Cloner le repository**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Installer les dépendances**
 
-### `npm run build`
+   ```bash
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Scripts disponibles
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Développement**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  Lance l'application en mode développement avec rechargement automatique :
 
-### `npm run eject`
+  ```bash
+  npm run develop
+  ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Build**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  Compile l'application pour la production dans le dossier `build` :
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  ```bash
+  npm run build
+  ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  ```bash
+  npm run eject
+  ```
 
-## Learn More
+- **Start**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  Démarre un serveur de production statique à partir du dossier `build` (utilise `serve`) :
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  ```bash
+  npm start
+  ```
 
-### Code Splitting
+- **Heroku Postbuild**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  Script utilisé par Heroku pour construire l'application après le déploiement :
 
-### Analyzing the Bundle Size
+  ```bash
+  npm run heroku-postbuild
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Configuration
 
-### Making a Progressive Web App
+Pour que le site fonctionne correctement, assure-toi de :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Avoir déployé et configuré le backend Strapi.
+- Ajouter un fichier `.env` à la racine du projet avec les variables suivantes :
 
-### Advanced Configuration
+  ```env
+  REACT_APP_EMAILJS_PUBLIC_KEY=yourPublicKeyEmailJs
+  REACT_APP_EMAILJS_SERVICE_ID=yourServiceIdEmailJs
+  REACT_APP_EMAILJS_TEMPLATE_ID=yourTemplateIdEmailJs
+  REACT_APP_STRAPI_URL=yourBackendStrapiUrl
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Déploiement
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ce projet est prêt à être déployé sur **Heroku**.
+Pour Heroku, le script `heroku-postbuild` se charge de compiler l'application après le déploiement.
