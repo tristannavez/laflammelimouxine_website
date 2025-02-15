@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/tristannavez/laflammelimouxine_website/compare/v1.0.0...v1.0.1) (2025-02-15)
+
+
+### Bug Fixes
+
+* **servicesList:** redirect all items to services page ([2108767](https://github.com/tristannavez/laflammelimouxine_website/commit/2108767ee182c6086ce76707c9295b030cd7f5a2))
+
 # 1.0.0 (2025-02-15)
 
 
