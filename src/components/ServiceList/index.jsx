@@ -10,28 +10,28 @@ export default function ServiceList() {
       subtitle:
         'La flamme Limouxine assure la vente d\'appareil de chauffage bois (bûche et granulés) à Limoux.',
       imgUrl: '/images/service_7.jpg',
-      href: '/service/service-details',
+      href: '/services',
     },
     {
       title: 'Installation',
       subtitle:
         'La flamme Limouxine est votre entreprise d\'appareil de chauffage bois (bûche et granulés) à Limoux.',
       imgUrl: '/images/service_8.jpg',
-      href: '/service/service-details',
+      href: '/services',
     },
     {
       title: 'Entretien',
       subtitle:
         'La flamme Limouxine est votre entreprise d’entretien d\'appareil de chauffage bois (bûche et  granulés) à Limoux.',
       imgUrl: '/images/service_9.jpg',
-      href: '/service/service-details',
+      href: '/services',
     },
     {
       title: 'Dépannage',
       subtitle:
         'La flamme Limouxine est votre entreprise de dépannage d\'appareil de chauffage bois (bûche et  granulés) à Limoux.',
       imgUrl: '/images/service_10.jpeg',
-      href: '/service/service-details',
+      href: '/services',
     },
   ];
   const [active, setActive] = useState(0);
