@@ -57,10 +57,6 @@ Ce repository contient le site web de **La Flamme Limouxine**, développé en **
   npm run build
   ```
 
-  ```bash
-  npm run eject
-  ```
-
 - **Start**
 
   Démarre un serveur de production statique à partir du dossier `build` (utilise `serve`) :
