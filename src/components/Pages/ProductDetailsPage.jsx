@@ -18,6 +18,7 @@ export default function ProductDetailsPage() {
             try {
                 const response = await fetch(`${strapiUrl}/api/products/${params.productId}?populate=*`);
                 const data = await response.json();
+                console.log('Product details:', data.data);
                 setProductDetails(data.data);
             } catch (error) {
                 console.error('Error fetching product details:', error);
@@ -28,6 +29,19 @@ export default function ProductDetailsPage() {
         window.scrollTo(0, 0);
         pageTitle('Product Details');
     }, [params.productId, strapiUrl]);
+
+    const getCategoriesText = (product) => {
+        if (product.categories?.data) {
+            return product.categories.data.map(category => category.name).join(', ');
+        } else if (product.categories) {
+            return product.categories.map(category => category.name).join(', ');
+        } else if (product.category?.data?.name) {
+            return product.category.data.name;
+        } else if (product.category?.name) {
+            return product.category.name;
+        }
+        return 'Aucune catégorie';
+    };
 
     return (
         <>
@@ -73,9 +87,7 @@ export default function ProductDetailsPage() {
                                 <Div>
                                     <h3 className='cs-accent_color cs-font_22 cs-font_18_sm cs-m0'>Catégorie(s):</h3>
                                     <p className='cs-m0'>
-                                        {productDetails.categories?.data
-                                            ?.map(category => category.name)
-                                            .join(', ')}
+                                        {getCategoriesText(productDetails)}
                                     </p>
                                 </Div>
 
