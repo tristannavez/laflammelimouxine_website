@@ -7,7 +7,6 @@ import './product.scss';
 // Composant Portfolio
 export default function Portfolio({ href, src, title, subtitle, variant }) {
   return (
-      // Conteneur global du portfolio
       <div className="product-container">
         <Div className="cs-portfolio_title_above">{title}</Div>
         <Link
@@ -24,7 +23,7 @@ export default function Portfolio({ href, src, title, subtitle, variant }) {
               <Div className="cs-portfolio_info_bg cs-accent_bg" />
               <Div className="cs-portfolio_text">
                 <h2 className="cs-portfolio_title">{title}</h2>
-                <Div className="cs-portfolio_subtitle">{subtitle}</Div>
+                {subtitle && <Div className="cs-portfolio_subtitle">{subtitle}</Div>}
               </Div>
             </Div>
           </>

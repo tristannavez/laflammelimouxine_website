@@ -12,7 +12,7 @@ import config from '../../config/config';
 export default function ProductsPage() {
     pageTitle('Produits');
     const [active, setActive] = useState('all');
-    const [itemShow, setItemShow] = useState(7);
+    const [itemShow, setItemShow] = useState(6);
     const [products, setProducts] = useState([]);
     const [categories, setCategories] = useState([]);
     const strapiUrl = config.strapiUrl;
@@ -40,6 +40,18 @@ export default function ProductsPage() {
             })
             .catch(error => console.error('Error fetching categories:', error));
     }, [strapiUrl]);
+
+    const filteredProducts = products.filter(product => {
+        if (active === 'all') {
+            return true;
+        } else {
+            return product.categories?.data?.some(category => category.name === active);
+        }
+    });
+
+    const getProductId = (product) => {
+        return product.documentId || product.id || product.slug;
+    };
 
     return (
         <>
@@ -71,49 +83,42 @@ export default function ProductsPage() {
                 </Div>
                 <Spacing lg="90" md="45" />
                 <Div className="row">
-                    {products
-                        .filter(product => {
-                            if (active === 'all') {
-                                return true;
-                            } else {
-                                return product.categories.data.some(category => category.name === active);
-                            }
-                        })
+                    {filteredProducts
                         .slice(0, itemShow)
-                        .map((product, index) => (
-                            <Div
-                                className={`${
-                                    index === 3 || index === 6 ? 'col-lg-8' : 'col-lg-4'
-                                }`}
-                                key={index}
-                            >
-                                <Product
-                                    title={product.title}
-                                    subtitle={product.subtitle}
-                                    href={`/products/${product.documentId}`}
-                                    src={
-                                        `${product.image.formats.thumbnail.url}`
-                                    }
-                                    variant="cs-style1 cs-type1"
-                                />
-                                <Spacing lg="25" md="25" />
-                            </Div>
-                        ))}
+                        .map((product, index) => {
+                            const productId = getProductId(product);
+                            
+                            return (
+                                <Div
+                                    className="col-lg-4 col-md-6"
+                                    key={productId || index}
+                                >
+                                    <Product
+                                        title={product.title || 'Sans titre'}
+                                        subtitle={product.subtitle || ''}
+                                        href={`/products/${productId}`}
+                                        src={product.image?.formats?.thumbnail?.url || product.image?.url || ''}
+                                        variant="cs-style1 cs-type1"
+                                    />
+                                    <Spacing lg="25" md="25" />
+                                </Div>
+                            );
+                        })}
                 </Div>
 
                 <Div className="text-center">
-                    {products.length <= itemShow ? (
+                    {filteredProducts.length <= itemShow ? (
                         ''
                     ) : (
                         <>
                             <Spacing lg="65" md="40" />
                             <span
                                 className="cs-text_btn"
-                                onClick={() => setItemShow(itemShow + 3)}
+                                onClick={() => setItemShow(itemShow + 6)}
                             >
-                <span>Load More</span>
-                <Icon icon="bi:arrow-right" />
-              </span>
+                                <span>Voir plus</span>
+                                <Icon icon="bi:arrow-right" />
+                            </span>
                         </>
                     )}
                 </Div>
