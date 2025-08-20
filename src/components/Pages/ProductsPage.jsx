@@ -29,13 +29,13 @@ export default function ProductsPage() {
             })
             .catch(error => console.error('Error fetching products:', error));
 
-        fetch(`${strapiUrl}/api/categories`)
+        fetch(`${strapiUrl}/api/categories?populate=*`)
             .then(response => response.json())
             .then(data => {
                 if (Array.isArray(data.data)) {
                     setCategories(data.data);
                 } else {
-                    console.error('Data from API is not an array:', data);
+                    console.error('Categories data from API is not an array:', data);
                 }
             })
             .catch(error => console.error('Error fetching categories:', error));
@@ -45,7 +45,16 @@ export default function ProductsPage() {
         if (active === 'all') {
             return true;
         } else {
-            return product.categories?.data?.some(category => category.name === active);
+            if (product.categories?.data) {
+                return product.categories.data.some(category => category.name === active);
+            } else if (product.categories) {
+                return product.categories.some(category => category.name === active);
+            } else if (product.category?.data?.name) {
+                return product.category.data.name === active;
+            } else if (product.category?.name) {
+                return product.category.name === active;
+            }
+            return false;
         }
     });
 
