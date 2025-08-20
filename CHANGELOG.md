@@ -1,3 +1,13 @@
+## [1.0.2](https://github.com/tristannavez/laflammelimouxine_website/compare/v1.0.1...v1.0.2) (2025-08-20)
+
+
+### Bug Fixes
+
+* categories display on produt details ([238df00](https://github.com/tristannavez/laflammelimouxine_website/commit/238df008080cf55500f0845bd50e8f151294b245))
+* cta bg ([d69e52e](https://github.com/tristannavez/laflammelimouxine_website/commit/d69e52ecdd2380789c0f558967a648644af8ede0))
+* filters on products ([3b4a730](https://github.com/tristannavez/laflammelimouxine_website/commit/3b4a730a36ecc317208b4155d83b2423fe575be4))
+* improve product display layout ([e0bd784](https://github.com/tristannavez/laflammelimouxine_website/commit/e0bd7846274dff69e8bbf871e2366df038923693))
+
 ## [1.0.1](https://github.com/tristannavez/laflammelimouxine_website/compare/v1.0.0...v1.0.1) (2025-02-15)
 
 
